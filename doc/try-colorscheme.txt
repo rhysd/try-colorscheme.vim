@@ -1,0 +1,91 @@
+*try-colorscheme.vim*       Try colorscheme on web at the speed of light
+
+Author : rhysd <lin90162@yahoo.co.jp>
+Version : 0.1
+
+CONTENTS                *try-colorscheme.vim-contents*
+
+Introduction            |try-colorscheme.vim-introduction|
+Install                 |try-colorscheme.vim-install|
+Usage                   |try-colorscheme.vim-usage|
+License                 |try-colorscheme.vim-usage|
+
+==============================================================================
+INTRODUCTION                                  *try-colorscheme.vim-introduction*
+
+|try-colorscheme.vim| is a plugin to apply colorscheme on the web instantly
+and temporarily.  Previously, you must install colorscheme plugin and then
+execute |:colorscheme|.  This plugin removes the annoying process.
+
+
+==============================================================================
+INSTALL                                            *try-colorscheme.vim-install*
+
+If you use a plugin manager, please follow the instruction of it to install
+this plugin.
+URL of this plugin's repository is below:
+
+https://github.com/rhysd/try-colorscheme.vim
+
+|try-colorscheme.vim| uses "curl" or "wget" command to send requests.  Please
+make sure to install at least one of them in your system. (They are usually
+pre-installed in *nix system.)
+
+
+==============================================================================
+USAGE                                                *try-colorscheme.vim-usage*
+
+*:TryColorscheme* command is whole of this plugin.
+For example, all of below apply wallaby colorscheme instantly.
+
+>
+  " Colorscheme repository (suppose GitHub repository)
+  :TryColorscheme rhysd/wallaby.vim
+
+  " GitHub URL of colorscheme
+  :TryColorscheme https://github.com/rhysd/wallaby.vim
+
+  " Direct URL to colorscheme file
+  :TryColorscheme https://github.com/rhysd/wallaby.vim/colors/wallaby.vim
+<
+
+Note:
+This plugin now supports GitHub URL only.  If you want to try a colorscheme
+plugin on www.vim.org, please use corresponding mirror repository.
+
+https://github.com/vim-scripts
+
+
+Note:
+If you want to use the feature of this plugin from Vim script, please use
+*try_colorscheme#try()* function.
+
+
+==============================================================================
+LICENSE                                            *try-colorscheme.vim-license*
+
+|try-colorscheme.vim| is distributed under The MIT license.
+
+  Copyright (c) 2015 rhysd
+
+  Permission is hereby granted, free of charge, to any person obtaining
+  a copy of this software and associated documentation files (the
+  "Software"), to deal in the Software without restriction, including
+  without limitation the rights to use, copy, modify, merge, publish,
+  distribute, sublicense, and/or sell copies of the Software, and to
+  permit persons to whom the Software is furnished to do so, subject to
+  the following conditions:
+  The above copyright notice and this permission notice shall be
+  included in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+  CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+==============================================================================
+vim:tw=78:colorcolumn=78:ts=8:ft=help:norl:et:fen:fdl=0:
