@@ -22,6 +22,7 @@ For example, all of below apply [wallaby colorscheme](https://github.com/rhysd/w
 :TryColorscheme https://github.com/rhysd/wallaby.vim/colors/wallaby.vim
 ```
 
+Note that this plugin may not work in Windows.
 
 ## Installation
 
