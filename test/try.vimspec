@@ -23,4 +23,9 @@ Describe :TryColorscheme
             Assert Equals(g:colors_name, 'wallaby')
         End
     End
+
+    It can detect if the repo's directory doesn't construct a standard plugin layout
+        TryColorscheme https://github.com/altercation/solarized
+        Assert Equals(g:colors_name, 'solarized')
+    End
 End
