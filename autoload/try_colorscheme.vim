@@ -49,11 +49,9 @@ function! s:detect_cs_in_github_repo(path) abort
     endif
 
     call map(files, '{
-            \ "name" : matchstr(v:val.path, "colors/\\zs[^/]\\+\\ze\\.vim"),
+            \ "name" : s:name_of(v:val.path),
             \ "url" : "https://raw.githubusercontent.com/" . a:path . "/master/" . v:val.path,
             \ }')
-
-    PP! files
 
     if len(files) == 1
         return files[0]
@@ -79,7 +77,7 @@ function! s:detect_colorscheme(cs_resource) abort
         if file_path !=# ''
             " XXX: Branch is hard-coded as 'master'
             return {
-                \   'name' : name,
+                \   'name' : s:name_of(file_path),
                 \   'url' : 'https://raw.githubusercontent.com/' . repo_path . '/master/' . file_path
                 \ }
         else

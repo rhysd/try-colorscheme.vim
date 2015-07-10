@@ -1,0 +1,26 @@
+Describe :TryColorscheme
+    Before each
+        colorscheme default
+    End
+
+    Describe user/repo
+        It automatically detects colorscheme in the repository in GitHub and applies it
+            TryColorscheme rhysd/wallaby.vim
+            Assert Equals(g:colors_name, 'wallaby')
+        End
+    End
+
+    Describe https://github.com/user/repo
+        It automatically detects colorscheme in the repository of URL and applies it
+            TryColorscheme https://github.com/rhysd/wallaby.vim
+            Assert Equals(g:colors_name, 'wallaby')
+        End
+    End
+
+    Describe Direct URL to colorscheme file
+        It automatically download the colorscheme file and applies it
+            TryColorscheme https://github.com/rhysd/wallaby.vim/colors/wallaby.vim
+            Assert Equals(g:colors_name, 'wallaby')
+        End
+    End
+End
