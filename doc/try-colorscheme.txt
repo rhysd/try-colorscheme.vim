@@ -57,6 +57,12 @@ https://github.com/vim-scripts
 
 
 Note:
+You can see screenshot here:
+
+https://raw.githubusercontent.com/rhysd/screenshots/master/try-colorscheme.vim/try-colorscheme.gif
+
+
+Note:
 If you want to use the feature of this plugin from Vim script, please use
 *try_colorscheme#try()* function.
 
