@@ -8,7 +8,7 @@ CONTENTS                *try-colorscheme.vim-contents*
 Introduction            |try-colorscheme.vim-introduction|
 Install                 |try-colorscheme.vim-install|
 Usage                   |try-colorscheme.vim-usage|
-License                 |try-colorscheme.vim-usage|
+License                 |try-colorscheme.vim-license|
 
 ==============================================================================
 INTRODUCTION                                  *try-colorscheme.vim-introduction*
@@ -35,7 +35,9 @@ pre-installed in *nix system.)
 ==============================================================================
 USAGE                                                *try-colorscheme.vim-usage*
 
-*:TryColorscheme* command is whole of this plugin.
+*:TryColorscheme* command is whole of this plugin.  It detects colorscheme
+file in the repository, downloads it temporarily, applies it and finally
+removes the file.
 For example, all of below apply wallaby colorscheme instantly.
 
 >
