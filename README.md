@@ -1,5 +1,6 @@
 Try Colorscheme on Web at the Speed of Light
 ============================================
+[![Build Status](https://travis-ci.org/rhysd/try-colorscheme.vim.svg)](https://travis-ci.org/rhysd/try-colorscheme.vim)
 
 When you want to try some colorschemes, you must install it at first and then execute `:colorscheme`.
 This plugin removes the annoying process.  This plugin downloads colorscheme file temporarily and applies it automatically.  The temporary colorscheme file is automatically deleted.
