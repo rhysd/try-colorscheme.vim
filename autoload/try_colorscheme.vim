@@ -57,12 +57,14 @@ function! s:detect_cs_in_github_repo(path) abort
         return files[0]
     endif
 
-    let input_msg = "Enter the number of file you want to choose"
+    let input_msg = ''
     for i in range(len(files))
         let input_msg .= printf("\n [%d] %s", i, files[i].name)
     endfor
+    let input_msg .= "\nEnter the number of file you want to choose: "
 
-    let idx = str2nr(input(input_msg, 0))
+    let idx = str2nr(input(input_msg))
+    echo "\n"
     if idx >= len(files)
         return {}
     endif
@@ -97,7 +99,6 @@ endfunction
 
 function! s:download_colorscheme(cs, dir) abort
     let downloaded = a:dir . '/' . a:cs.name . '.vim'
-    echomsg a:cs.url
     let response = s:HTTP.request({
                 \ 'url' : a:cs.url,
                 \ 'method' : 'GET',
@@ -147,7 +148,7 @@ function! try_colorscheme#try(cs_resource) abort
     endif
 
     if s:try(cs)
-        echomsg 'try-colorscheme.vim: Enjoy ' . cs.name
+        echomsg 'try-colorscheme.vim: Enjoy colorscheme ''' . cs.name . '''!'
     endif
 endfunction
 
