@@ -59,9 +59,9 @@ function! s:detect_cs_in_github_repo(path) abort
 
     let input_msg = ''
     for i in range(len(files))
-        let input_msg .= printf("\n [%d] %s", i, files[i].name)
+        let input_msg .= printf("[%d] %s\n", i, files[i].name)
     endfor
-    let input_msg .= "\nEnter the number of file you want to choose: "
+    let input_msg .= "Enter the number of colorscheme you want to choose: "
 
     let idx = str2nr(input(input_msg))
     echo "\n"
@@ -103,7 +103,7 @@ function! s:download_colorscheme(cs, dir) abort
                 \ 'url' : a:cs.url,
                 \ 'method' : 'GET',
                 \ 'client' : ['curl', 'wget'],
-                \ 'outputFile' : a:dir . '/' . a:cs.name . '.vim',
+                \ 'outputFile' : downloaded,
                 \ })
     if response.success
         return 1
@@ -115,9 +115,9 @@ endfunction
 
 function! s:try(cs) abort
     let rtp_save = &rtp
+    let tmpdir = tempname()
 
     try
-        let tmpdir = tempname()
         let tmp_color_dir = tmpdir . '/colors'
 
         " Note: mkdir() is unavailable in some systems
